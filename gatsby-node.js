@@ -463,7 +463,7 @@ exports.createResolvers = async ({ createResolvers, intermediateSchema, actions,
                     async resolve(source) {
                         if (source.url) {
                             return await gatsby_source_filesystem_1.createRemoteFileNode({
-                                url: encodeURI(source.url),
+                                url: source.url,
                                 store,
                                 cache,
                                 createNode,
